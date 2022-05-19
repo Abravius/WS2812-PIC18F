@@ -1,4 +1,4 @@
-# WS2812_PIC18F_32MHZ_64MHZ
+# WS2812_PIC18F
 Driver allowing to use WS2812 and WS2813 LED with some 18F PIC (CCS C)
 
 This driver allowing you to use the LED WS2812 and WS2813 with some 18Fxxxx PIC !
