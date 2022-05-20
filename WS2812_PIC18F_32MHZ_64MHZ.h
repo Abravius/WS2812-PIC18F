@@ -17,14 +17,18 @@
 
 //What PIN is used from the C port
 #define SELECTED_PORT_OUTPUT    5
+//Generally 0 to 7, but sometines 0 to 3 or 0 to 1, look into the datasheet of 
+//your PIC18F !
 
 //How many leds on the strip
 #define LED_QTY                 24
 
-//Register for the selected port (Look in the technical Data of your PIC !)
+//Register for the selected port (Look in the technical Data of your PIC18F !)
 #byte PORTX =                   0x3FCC
 #byte LATX =                    0x3FBC
 #byte TRISX =                   0x3FC4
+//In the datasheet the "X" is replaced by the letter of the port (A, B, C, ...)
+//Make "Ctrl+f" into the technical data and search "LATC" per example.
 
 
 ///////////////////////////////////FUNCTIONS////////////////////////////////////
@@ -294,3 +298,7 @@ void showStrip()
     //of the LED for more informations
     delay_us(100);
 }
+
+#ifndef PIC_64MHZ || PIC_32MHZ
+#error You need to choose PIC_64MHZ or PIC_32MHZ !
+#endif
