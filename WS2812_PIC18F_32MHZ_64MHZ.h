@@ -225,7 +225,7 @@ void showStrip()
         CLRF LP2;
 #endif
 #ifdef PIC_64MHZ
-///////////////////////////////////////////////////////CONCERNE LA COULEUR VERTE
+///////////////////////////////////////////////////////FOR THE GREEN
         SUB0: 
         BTFSC LP0, 3;
         GOTO SUB1;
@@ -236,7 +236,7 @@ void showStrip()
         NOP;
         NOP;
         NOP;
-        BTFSS _G, 7; //Condition permettant de déterminer quand la PIN doit être FALSE
+        BTFSS _G, 7;
         BCF PORTX,SELECTED_PORT_OUTPUT;
         NOP;
         NOP;
@@ -245,7 +245,7 @@ void showStrip()
         RLCF _G;
         GOTO SUB0;
     
-///////////////////////////////////////////////////////CONCERNE LA COULEUR ROUGE
+///////////////////////////////////////////////////////FOR THE RED
         SUB1:
         BTFSC LP1, 3;
         GOTO SUB2;
@@ -256,7 +256,7 @@ void showStrip()
         NOP;
         NOP;
         NOP;
-        BTFSS _R, 7; //Condition permettant de déterminer quand la PIN doit être FALSE
+        BTFSS _R, 7;
         BCF PORTX,SELECTED_PORT_OUTPUT;
         NOP;
         NOP;
@@ -265,7 +265,7 @@ void showStrip()
         RLCF _R;
         GOTO SUB1;
 
-////////////////////////////////////////////////////////CONCERNE LA COULEUR BLEU
+////////////////////////////////////////////////////////FOR THE BLUE
         SUB2:
         BTFSC LP2, 3;
         GOTO SUB3;
@@ -276,7 +276,7 @@ void showStrip()
         NOP;
         NOP;
         NOP;
-        BTFSS _B, 7; //Condition permettant de déterminer quand la PIN doit être FALSE
+        BTFSS _B, 7;
         BCF PORTX,SELECTED_PORT_OUTPUT;
         NOP;
         NOP;
@@ -285,7 +285,7 @@ void showStrip()
         RLCF _B;
         GOTO SUB2;
     
-//////////////////////////////FIN DU CYCLE D'ENVOI//////////////////////////////
+/////////////////////////////END OF THE SEND CYCLE//////////////////////////////
         SUB3:
         CLRF LP0;
         CLRF LP1;
