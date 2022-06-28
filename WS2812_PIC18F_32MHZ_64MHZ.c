@@ -1,5 +1,5 @@
 /* 
- * File:   WS2812_PIC18F_32MHZ_64MHZ.h
+ * File:   WS2812_PIC18F_32MHZ_64MHZ.c
  * Author: rionque
  * Description : this software can be include to your project when you want to
  * use the programmable LED WS2812 and WS2813.
